@@ -32,13 +32,13 @@
 
         <div class="row gy-4">
 
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div *ngFor="let item of properties" class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="card">
-              <img src="assets/assetsfromestate/img/properties/property-1.jpg" alt="" class="img-fluid">
+              <img src="assets/assetsfromestate/img/properties/property-{{item.image}}.jpg"  alt="" class="img-fluid">
               <div class="card-body">
-                <span class="sale-rent">Rent | $1200</span>
-                <h3><a href="property-single.html" class="stretched-link">204 Mount Olive Road Two</a></h3>
-                <div class="card-content d-flex flex-column justify-content-center text-center">
+                <span class="sale-rent">{{item.saletype == 1 ? "Rent" :"Sale"}} | ${{item.amount}}</span>
+                <h3><a href="property-single.html" class="stretched-link">{{item.address}}</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center rounded">
                   <div class="row propery-info">
                     <div class="col">Area</div>
                     <div class="col">Beds</div>
@@ -46,133 +46,19 @@
                     <div class="col">Garages</div>
                   </div>
                   <div class="row">
-                    <div class="col">340m2</div>
-                    <div class="col">5</div>
-                    <div class="col">2</div>
-                    <div class="col">1</div>
+                    <div class="col">{{item.area}}</div>
+                    <div class="col">{{item.beds}}</div>
+                    <div class="col">{{item.baths}}</div>
+                    <div class="col">{{item.garages}}</div>
                   </div>
+                  
                 </div>
+               
               </div>
             </div>
-          </div><!-- End Property Item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card">
-              <img src="assets/assetsfromestate/img/properties/property-2.jpg" alt="" class="img-fluid">
-              <div class="card-body">
-                <span class="sale-rent">Sale | $350.000</span>
-                <h3><a href="property-single.html" class="stretched-link">647 Molie Road</a></h3>
-                <div class="card-content d-flex flex-column justify-content-center text-center">
-                  <div class="row propery-info">
-                    <div class="col">Area</div>
-                    <div class="col">Beds</div>
-                    <div class="col">Baths</div>
-                    <div class="col">Garages</div>
-                  </div>
-                  <div class="row">
-                    <div class="col">340m2</div>
-                    <div class="col">5</div>
-                    <div class="col">2</div>
-                    <div class="col">1</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Property Item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card">
-              <img src="assets/assetsfromestate/img/properties/property-3.jpg" alt="" class="img-fluid">
-              <div class="card-body">
-                <span class="sale-rent">Sale | $580.000</span>
-                <h3><a href="property-single.html" class="stretched-link">711 Avenue Road</a></h3>
-                <div class="card-content d-flex flex-column justify-content-center text-center">
-                  <div class="row propery-info">
-                    <div class="col">Area</div>
-                    <div class="col">Beds</div>
-                    <div class="col">Baths</div>
-                    <div class="col">Garages</div>
-                  </div>
-                  <div class="row">
-                    <div class="col">340m2</div>
-                    <div class="col">5</div>
-                    <div class="col">2</div>
-                    <div class="col">1</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Property Item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="card">
-              <img src="assets/assetsfromestate/img/properties/property-4.jpg" alt="" class="img-fluid">
-              <div class="card-body">
-                <span class="sale-rent">Rent | $6500</span>
-                <h3><a href="property-single.html" class="stretched-link">117 Milk Road</a></h3>
-                <div class="card-content d-flex flex-column justify-content-center text-center">
-                  <div class="row propery-info">
-                    <div class="col">Area</div>
-                    <div class="col">Beds</div>
-                    <div class="col">Baths</div>
-                    <div class="col">Garages</div>
-                  </div>
-                  <div class="row">
-                    <div class="col">340m2</div>
-                    <div class="col">5</div>
-                    <div class="col">2</div>
-                    <div class="col">1</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Property Item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="card">
-              <img src="assets/assetsfromestate/img/properties/property-5.jpg" alt="" class="img-fluid">
-              <div class="card-body">
-                <span class="sale-rent">Rent | $3000</span>
-                <h3><a href="property-single.html" class="stretched-link">678 Broad Road</a></h3>
-                <div class="card-content d-flex flex-column justify-content-center text-center">
-                  <div class="row propery-info">
-                    <div class="col">Area</div>
-                    <div class="col">Beds</div>
-                    <div class="col">Baths</div>
-                    <div class="col">Garages</div>
-                  </div>
-                  <div class="row">
-                    <div class="col">340m2</div>
-                    <div class="col">5</div>
-                    <div class="col">2</div>
-                    <div class="col">1</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Property Item -->
-
-          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="card">
-              <img src="assets/assetsfromestate/img/properties/property-6.jpg" alt="" class="img-fluid">
-              <div class="card-body">
-                <span class="sale-rent">Sale | $650.000</span>
-                <h3><a href="property-single.html" class="stretched-link">974 Denim Road</a></h3>
-                <div class="card-content d-flex flex-column justify-content-center text-center">
-                  <div class="row propery-info">
-                    <div class="col">Area</div>
-                    <div class="col">Beds</div>
-                    <div class="col">Baths</div>
-                    <div class="col">Garages</div>
-                  </div>
-                  <div class="row">
-                    <div class="col">340m2</div>
-                    <div class="col">5</div>
-                    <div class="col">2</div>
-                    <div class="col">1</div>
-                  </div>
-                </div>
-              </div>
+            <div class="row p-3">
+              <button class="btn btn-dark w-75" data-bs-toggle="modal" data-bs-target="#updateModal" (click)="openUpdateModal(item)">Update</button>
+              <button type="button" (click)="delete(item._id)" class="btn btn-danger w-25"><i class="fa fa-solid fa-trash"></i></button>
             </div>
           </div><!-- End Property Item -->
 
@@ -187,7 +73,7 @@
 
 
   
-  <!-- Modal -->
+  <!--property Add Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -231,6 +117,55 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button (click)="addNewProperty()" type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- update Modal -->
+  <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="updateModalLabel">Update</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           
+         <form>
+                <select [(ngModel)]="updatePropertyData.image" name="image" class="form-select mt-2" aria-label="Default select example">
+
+                    <option value="" disabled selected>select Image</option>
+                    <option value="1">One   </option>
+                    <option value="2">Two   </option>
+                    <option value="3">Three </option>
+                    <option value="4">Four  </option>
+                    <option value="5">Five  </option>
+                    <option value="6">Six   </option>
+                  
+                  </select>
+    
+                  <select [(ngModel)]="updatePropertyData.saletype" name="saletype" class="form-select mt-2" aria-label="Default select example" >
+                    <option value="" disabled selected>Rent/Sale </option>
+                    <option value="1">Rent</option>
+                    <option value="2">Sale</option>
+                  </select>
+              <input [(ngModel)]="updatePropertyData.amount" name="amount" type="text" class="mt-2 form-control" placeholder="Amount">
+              <input [(ngModel)]="updatePropertyData.address" name="address" type="text" class="mt-2 form-control" placeholder="Address">
+              <input [(ngModel)]="updatePropertyData.area" name="address" type="text" class="mt-2 form-control" placeholder="Area in square-feet">
+              <input [(ngModel)]="updatePropertyData.beds" name="beds" type="text" class="mt-2 form-control" placeholder="No of beds">
+              <input [(ngModel)]="updatePropertyData.baths" name="baths" type="text" class="mt-2 form-control" placeholder="No of Baths">
+              <input [(ngModel)]="updatePropertyData.garages" name="garages" type="text" class="mt-2 form-control" placeholder="No of Garages">
+    
+         </form>
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button (click)="update()" type="button" class="btn btn-primary">Update</button>
         </div>
       </div>
     </div>

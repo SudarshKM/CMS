@@ -17,7 +17,13 @@ export class ApiService {
     return this.api.get(`${this.serverUrl}/get-property`)
   }
 
-  deleteProperty(reqBody:any){
-    return this.api.delete(`${this.serverUrl}/update-property` , reqBody)
+
+
+  updateProperty(reqBody:any){
+    return this.api.put(`${this.serverUrl}/update-property` , reqBody)
+  }
+
+  deleteProperty(id:any){
+    return this.api.delete(`${this.serverUrl}/delete-property/${id}`)
   }
 }

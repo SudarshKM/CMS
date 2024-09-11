@@ -29,7 +29,7 @@ export const updateProperty = async (req, res) => {
         image, saletype, amount, address, area, beds, baths, garages
       });
 
-      res.status(200).json('Product Updated')
+      res.status(200).json('Property Updated')
     } catch (error) {
       res.status(401).json(error);
 
@@ -38,10 +38,10 @@ export const updateProperty = async (req, res) => {
 
 
 export const deleteProperty = async(req,res)=>{
-  const {id} = req.body
+  const {id} = req.params
   try {
     await properties.deleteOne({_id:id})
-    res.status(200).json("Product Deleted")
+    res.status(200).json("Property Deleted")
     
   } catch (error) {
     res.status(401).json(error);
